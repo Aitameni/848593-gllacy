@@ -1,8 +1,8 @@
 # Личный проект «Глейси»
 
 * Студент: [Любовь Папер](https://up.htmlacademy.ru/htmlcss/22/user/848593).
-* Наставник: [Михаил Поданев].
-(https://htmlacademy.ru/profile/mpodanev)
+* Наставник: [Михаил Поданев](https://htmlacademy.ru/profile/mpodanev).
+
 
 ---
 
