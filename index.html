@@ -8,58 +8,52 @@
   <body>
     <header class="main-header">
       <a class="logo">
-            <img src="img/logo.svg" width="160" height="80" alt="Логотип магазина Gllacy Shop">
+        <img src="img/logo.svg" width="160" height="80" alt="Логотип магазина Gllacy Shop">
       </a>
       <nav class="main-navigation">        
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a>
+            <ul class="submenu">
+              <li><a href="catalog-new.html"><b>Новинки</b></a></li>
+              <li><a href="cream.html">Сливочное</a></li>
+              <li><a href="sherbet/html" class="mouseover">Щербеты</a></li>
+              <li><a href="popsicle.html">Фруктовый лед</a></li>
+              <li><a href="mellorine.html">Мелорин</a></li>
+            </ul> 
+          </li>
           <li><a href="shipping-and-payment.html">Доставка и оплата</a></li>
           <li><a href="about-us.html">О Компании</a></li>
         </ul>
         <input type="search">
+          <section class="modal modal-searching">
+            <h2 class="visually-hidden">Поиск</h2>
+            <input type="text" name="searching" value="Что ищем?">          
+            <span class="modal-close">x</span>
+          </section>
         
         <ul class="user-navigation">
-            <li class="login-link"><img src="image/enter.png" alt="Вход">Вход</li>
-        </ul>       
+            <li class="login-link">Вход</li>
+        </ul>
+          <section class="modal modal-login">
+            <h2 class="visually-hidden">Введите свой адрес электронной почты и пароль</h2>
+            <input type="text" name="user-e-mail" value="Электронная почта">
+            <input type="password" name="user-password" value="Пароль">
+            <button type="submit" value="Войти">Войти</button>
+            <a href="fogotten-password.html">Забыли пароль?</a>
+            <a href="sign-in.html">Новая регистрация</a>
+            <span class="modal-close">x</span>
+          </section>       
                   
         <ul class="cart">
           <li class="empty-cart">Пусто</li>
         </ul>
         
-        <ul class="contact-us">
-          <li class="work-time">С 10 до 20, ежедневно</li>
-          <li class="phone">8 812 450-25-25</li>
-        </ul>
+        <p class="contact-us">
+          С 10 до 20, ежедневно
+          8 812 450-25-25
+        </p>
       </nav>
-    </header>
-
-    <section class="modal modal-catalog">
-        <h2 class="visually-hidden">Каталог</h2>
-        <ul>
-          <li><a href="catalog-new.html"><b>Новинки</b></a></li>
-          <li><a href="cream.html">Сливочное</a></li>
-          <li><a href="sherbet/html">Щербеты</a></li>
-          <li><a href="popsicle.html">Фруктовый лед</a></li>
-          <li><a href="mellorine.html">Мелорин</a></li>
-        </ul>
-        <span class="modal-close">x</span>
-    </section>
-
-      <section class="modal modal-searching">
-          <h2 class="visually-hidden">Поиск</h2>
-          <input type="text" name="searching" value="Что ищем?">          
-          <span class="modal-close">x</span>
-      </section>
-
-      <section class="modal modal-login">
-          <h2 class="visually-hidden">Введите свой адрес электронной почты и пароль</h2>
-          <input type="text" name="user-e-mail" value="Электронная почта">
-          <input type="password" name="user-password" value="Пароль">
-          <button type="submit" value="Войти">Войти</button>
-          <a href="fogotten-password.html">Забыли пароль?</a>
-          <a href="sign-in.html">Новая регистрация</a>
-          <span class="modal-close">x</span>
-      </section>
+    </header>      
 
     <main class="container">
 
@@ -94,15 +88,38 @@
       <section class="hit-display">
         <h2 class="visually-hidden">Наши хиты</h2>
         <ul>
-          <li class="hit-display-item"><img src="images/hit-display-item-1" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">Сливочное с апельсиновым джемом и цитрусовой стружкой 310 р/кг</li>
-          <li class="hit-display-item"><img src="images/hit-display-item-2" alt="Сливочно-кофейное с кусочками шоколада">Сливочно-кофейное с кусочками шоколада 380 р/кг</li>
-          <li class="hit-display-item"><img src="images/hit-display-item-3" alt="Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное с присыпкой из белого шоколада 355 р/кг</li>
-          <li class="hit-display-item"><img src="images/hit-display-item-4" alt="Сливочное крем-брюле с карамельной подливкой">Сливочное крем-брюле с карамельной подливкой 415 р/кг</li>
+          <li class="hit-display-item"><img src="images/hit-display-item-1" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <p class="hit-display-item"><a href="catalog-item-1.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
+            <b>310 р/кг</b>
+            <div class="catalog-item-hidden-element">              
+              <a class="button" href="catalog.html/item-1">Быстрый просмотр</a>
+            </div>
+          </li>
+          <li class="hit-display-item"><img src="images/hit-display-item-2" alt="Сливочно-кофейное с кусочками шоколада">
+            <p class="hit-display-item"><a href="catalog/item-2.html">Сливочно-кофейное с кусочками шоколада</a></p>
+            <b>380 р/кг</b>
+            <div class="catalog-item-hidden-element">              
+            <a class="button" href="catalog.html/item-2">Быстрый просмотр</a>
+            </div> 
+            </li>
+          <li class="hit-display-item"><img src="images/hit-display-item-3" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <p class="hit-display-item"><a href="catalog/item-3.html">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
+            <b>355 р/кг</b>
+            <div class="catalog-item-hidden-element">              
+            <a class="button" href="catalog.html/item-3">Быстрый просмотр</a>
+            </div> 
+          </li>
+          <li class="hit-display-item"><img src="images/hit-display-item-4" alt="Сливочное крем-брюле с карамельной подливкой">
+            <p class="hit-display-item"><a href="catalog/item-4.html">Сливочное крем-брюле с карамельной подливкой</a></p>
+            <b> 415 р/кг</b>
+            <div class="catalog-item-hidden-element">              
+              <a class="button" href="catalog.html/item-4">Быстрый просмотр</a>
+            </div> 
+          </li>
         </ul>
       </section>
 
-      <article class="features">
-          <h2 class="visually-hidden">Преимущества</h2>
+      <section class="features">
           <h2>Магазин «Глэйси» — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
           <ul class="features-list">
             <li class="feature-item">
@@ -122,14 +139,13 @@
                 <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
             </li>
           </ul>
-      </article>
+        </section>
 
         <div class="blog-and-subscribe">
-          <h2 class="visually-hidden">Наш блог и подписка</h2>
-         <section class="blog-news">
+          <article class="blog-news">
             <h4 class="blog-news-header">Новое в нашем блоге</h4>
             <a class="blog-news-title" href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
-          </section>
+          </article>
           <section class="subscribe">
             <h4 class="visually-hidden">Наша рассылка</h4>
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)</p>
@@ -142,25 +158,16 @@
           <h2 class="visually-hidden">Как нас найти</h2>
           <img src="images/map.png" alt="Карта">
           <p class="contacts">
-              Адрес главного офиса<br>
-              и офлайн-магазина:<br>
-              ул. Б. Конюшенная<br> 
-              19/8, Санкт-Петербург<br>
-              Для заказов по телефону:<br>
-              8 812 450-25-25<br>
-              (с 10 до 20 ежедневно)<br>
+              Адрес главного офиса
+              и офлайн-магазина:
+              ул. Б. Конюшенная 
+              19/8, Санкт-Петербург
+              Для заказов по телефону:
+              8 812 450-25-25
+              (с 10 до 20 ежедневно)
               <button class="button" name="feedback" value="Форма обратной связи">Форма обратной связи</button>
           </p>
-        </section>
-        <section class="modal modal-feedback-form">
-          <h2 class="visually-hidden">Задайте свой вопрос</h2>
-          <h2>Мы обязательно вам ответим!</h2>          
-          <input type="text" name="user-name" value="Как вас зовут?">
-          <input type="text" name="user-e-mail" value="Ваша почта для ответа">
-          <textarea>Как вас зовут?</textarea>
-          <button type="submit" value="Отправить">Отправить</button>        
-          <span class="modal-close">x</span>
-      </section>
+        </section>       
     </main>
     <footer>
         <div class="footer-social">
@@ -188,5 +195,14 @@
             <p>Сделано в <a class="footer-copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>©2017</p> 
           </div>
     </footer>
+    <section class="modal modal-feedback-form">
+      <h2 class="visually-hidden">Задайте свой вопрос</h2>
+      <h2>Мы обязательно вам ответим!</h2>          
+      <input type="text" name="user-name" value="Как вас зовут?">
+      <input type="text" name="user-e-mail" value="Ваша почта для ответа">
+      <textarea>Как вас зовут?</textarea>
+      <button type="submit" value="Отправить">Отправить</button>        
+      <span class="modal-close">x</span>
+    </section>
   </body>
 </html>
