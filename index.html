@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">     
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
@@ -264,14 +265,12 @@
     </footer>
     <section class="modal modal-feedback-form">
       <h2>Мы обязательно вам ответим!</h2>
-      <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="POST">
-        <fieldset>
+      <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="POST">        
           <input type="text" name="user-name" placeholder="Как вас зовут?">
           <input type="email" name="user-e-mail" placeholder="Ваша почта для ответа">
-          <textarea placeholder="Напишите что-нибудь..."></textarea>
+          <textarea name="user-message" placeholder="Напишите что-нибудь..."></textarea>
           <button type="submit" value="Отправить">Отправить</button>        
           <button class="modal-close" type="button" name="modal-close"><img src="img/cross-big.svg" alt="Закрыть"></button>
-        </fieldset>        
       </form>
     </section>
   </body>
