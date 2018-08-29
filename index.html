@@ -24,29 +24,51 @@
           <li><a href="shipping-and-payment.html">Доставка и оплата</a></li>
           <li><a href="about-us.html">О Компании</a></li>
         </ul>
-        <input type="search">
-          <section class="hidden hidden-searching">
-            <h2 class="visually-hidden">Поиск</h2>
-            <input type="text" name="searching" value="Что ищем?">          
-            <span class="hidden-close">x</span>
-          </section>
         
-        <ul class="user-navigation">
-            <li class="login-link">Вход</li>
-        </ul>
+        <section class="search">
+          <h2 class="visually-hidden">Поиск</h2>
+          <img src="img/loupe.svg" alt="Поиск">
+          <section class="hidden hidden-searching">
+            <form class="searching" method="get" action="https://echo.htmlacademy.ru">              
+              <input type="search" name="search" value="Что ищем?">          
+            </form>
+          </section>
+        </section>
+
+        <section class="user-navigation">
+          <h2 class="visually-hidden">Вход на сайт</h2>
+          <ul class="user-navigation">
+            <li class="login-link">
+              <a class="login-link" href="login.html"><img src="img/entrance.svg" alt="Вход">Вход</a>
+            </li>
+          </ul>
           <section class="hidden hidden-login">
-            <h2 class="visually-hidden">Введите свой адрес электронной почты и пароль</h2>
-            <input type="text" name="user-e-mail" value="Электронная почта">
-            <input type="password" name="user-password" value="Пароль">
-            <button type="submit" value="Войти">Войти</button>
-            <a href="fogotten-password.html">Забыли пароль?</a>
-            <a href="sign-in.html">Новая регистрация</a>
-            <span class="hidden-close">x</span>
-          </section>       
-                  
-        <ul class="cart">
-          <li class="empty-cart">Пусто</li>
-        </ul>
+            <h2 class="visually-hidden">Введите ваши данные</h2>
+            <form class="user-navigation" action="https://echo.htmlacademy.ru" method="POST">
+              <fieldset>
+                <p>
+                  <label class="visually-hidden" for="user-e-mail">Ваша электронная почта</label>
+                  <input id="user-e-mail" type="email" name="email" placeholder="Электронная почта">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="user-password">Ваш пароль</label>
+                  <input id="user-password" type="password" name="password" placeholder="Пароль">
+                </p>                  
+                <button type="submit" value="Войти">Войти</button>
+                <a class="password-restore" href="fogotten-password.html">Забыли пароль?</a>
+                <a class="sign-in" href="sign-in.html">Новая регистрация</a>
+              </fieldset> 
+            </form>          
+          </section>
+        </section>        
+
+        
+        <section class="сart">
+          <h2 class="visually-hidden">Корзина</h2>         
+          <ul class="cart">
+            <li class="empty-cart">Пусто</li>
+          </ul>
+        </section>
         
         <p class="contact-us">
           С 10 до 20, ежедневно
@@ -62,9 +84,18 @@
       <section class="two-as-one">
         <h2 class="visually-hidden">Сладкие парочки</h2>
         <ul>
-          <li class="two-as-one-item"><img src="img/2-in-1_creme_brulee_and_ice-cream_raspberry_jam.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">Крем-брюле и пломбир с малиновым джемом</li>
-          <li class="two-as-one-item"><img src="img/2-in-1_chocolate_ice-cream_and_lemon_sorbet.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">Шоколадный пломбир и лимонный сорбет</li>
-          <li class="two-as-one-item"><img src="img/2-in-1_ice-cream_chocolate_fudge_and_strawberry_sorbet.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">Пломбир с помадкой и клубничный щербет</li>
+          <li class="two-as-one-item">
+            <img src="img/2-in-1_creme_brulee_and_ice-cream_raspberry_jam.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
+            <p class="two-as-one-item-name">Крем-брюле и пломбир с малиновым джемом</p>
+          </li>
+          <li class="two-as-one-item">
+            <img src="img/2-in-1_chocolate_ice-cream_and_lemon_sorbet.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
+            <p class="two-as-one-item-name">Шоколадный пломбир и лимонный сорбет</p>
+          </li>
+          <li class="two-as-one-item">
+            <img src="img/2-in-1_ice-cream_chocolate_fudge_and_strawberry_sorbet.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
+            <p class="two-as-one-item-name">Пломбир с помадкой и клубничный щербет</p>
+          </li>
         </ul>
         <input type="button" class="buttons-big" value="Давайте оба!">
       </section>
@@ -88,33 +119,61 @@
       <section class="hit-display">
         <h2 class="visually-hidden">Наши хиты</h2>
         <ul>
-          <li class="hit-display-item"><img src="img/catalog/cream_ice/orange_jam_and_zest.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <p class="hit-display-item"><a href="catalog-item-1.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
-            <b>310 р/кг</b>
+          <li class="hit-display-item">
+            <a href=catalog-item-1.html>
+              <p class="catalog-item-image">
+                <img src="img/catalog/cream_ice/orange_jam_and_zest.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              </p>
+              <p class="catalog-item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+            </a>
+            <p class="catalog-item-price">
+              <b>310 р/кг</b>
+            </p>
             <div class="catalog-item-hidden-element">              
               <a class="button" href="catalog.html/item-1">Быстрый просмотр</a>
-            </div>
-          </li>
-          <li class="hit-display-item"><img src="img/catalog/cream_ice/coffee_and_chocolate_chips.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-            <p class="hit-display-item"><a href="catalog/item-2.html">Сливочно-кофейное с кусочками шоколада</a></p>
-            <b>380 р/кг</b>
-            <div class="catalog-item-hidden-element">              
-            <a class="button" href="catalog.html/item-2">Быстрый просмотр</a>
-            </div> 
-            </li>
-          <li class="hit-display-item"><img src="img/catalog/cream_ice/strawberry_and_white_chocolate_adding.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <p class="hit-display-item"><a href="catalog/item-3.html">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
-            <b>355 р/кг</b>
-            <div class="catalog-item-hidden-element">              
-            <a class="button" href="catalog.html/item-3">Быстрый просмотр</a>
             </div> 
           </li>
-          <li class="hit-display-item"><img src="img/catalog/cream_ice/creme_brulee_and_caramel.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-            <p class="hit-display-item"><a href="catalog/item-4.html">Сливочное крем-брюле с карамельной подливкой</a></p>
-            <b> 415 р/кг</b>
-            <div class="catalog-item-hidden-element">              
+          <li class="hit-display-item">
+            <a href=catalog-item-2.html>
+              <p class="catalog-item-image">
+                <img src="img/catalog/cream_ice/coffee_and_chocolate_chips.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+              </p>                       
+              <p class="catalog-item-name">Сливочно-кофейное с кусочками шоколада</p>
+            </a>
+            <p class="catalog-item-price">
+              <b>380 р/кг</b>
+            </p>
+            <div class="catalog-item-hidden-element">
+              <a class="button" href="catalog.html/item-2">Быстрый просмотр</a>              
+            </div>  
+          </li>
+          <li class="hit-display-item">
+            <a href=catalog-item-3.html>
+              <p class="catalog-item-image">
+                <img src="img/catalog/cream_ice/strawberry_and_white_chocolate_adding.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+              </p>            
+              <p class="catalog-item-name">Сливочно-клубничное с присыпкой из белого шоколада</p>
+            </a>
+            <p class="catalog-item-price">
+              <b>355 р/кг</b>
+            </p>
+            <div class="catalog-item-hidden-element">
+              <a class="button" href="catalog.html/item-3">Быстрый просмотр</a>
+            </div> 
+          </li>
+          <li class="hit-display-item">
+            <a href=catalog-item-4.html>
+              <p class="catalog-item-image">
+                <img src="img/catalog/cream_ice/creme_brulee_and_caramel.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+              </p>
+              <p class="catalog-item-name">Сливочное крем-брюле с карамельной подливкой</p>
+            </a>
+            <p class="catalog-item-price">
+              <b>415 р/кг</b>
+            </p>
+            <div class="catalog-item-hidden-element">
               <a class="button" href="catalog.html/item-4">Быстрый просмотр</a>
-            </div> 
+            </div>  
           </li>
         </ul>
       </section>
@@ -169,10 +228,10 @@
         <div class="footer-social">
             <h3 class="visually-hidden">Мы в соцсетях</h3>
             <ul>
-              <li><a class="social-button" href="#">Твиттер</a></li>
-              <li><a class="social-button" href="#">Инстаграм</a></li>
-              <li><a class="social-button" href="#">Фейсбук</a></li>
-              <li><a class="social-button" href="#">Вконтакте</a></li>
+              <li><a class="social-button" href="#" aria-label="Наша страница в Твиттере">Твиттер</a></li>
+              <li><a class="social-button" href="#" aria-label="Наша страница в Инстаграме">Инстаграм</a></li>
+              <li><a class="social-button" href="#" aria-label="Наша страница на Фейсбуке">Фейсбук</a></li>
+              <li><a class="social-button" href="#" aria-label="Наша страница в Вконтакте">Вконтакте</a></li>
             </ul>            
         </div>
 
@@ -192,13 +251,12 @@
           </div>
     </footer>
     <section class="modal modal-feedback-form">
-      <h2 class="visually-hidden">Задайте свой вопрос</h2>
       <h2>Мы обязательно вам ответим!</h2>          
       <input type="text" name="user-name" value="Как вас зовут?">
-      <input type="text" name="user-e-mail" value="Ваша почта для ответа">
-      <textarea>Как вас зовут?</textarea>
+      <input type="email" name="user-e-mail" value="Ваша почта для ответа">
+      <textarea>Напишите что-нибудь...</textarea>
       <button type="submit" value="Отправить">Отправить</button>        
-      <span class="modal-close">x</span>
+      <button class="modal-close" type="button"><img src="img/cross-big.svg" alt="Закрыть"></button>
     </section>
   </body>
 </html>
