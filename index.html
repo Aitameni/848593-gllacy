@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -97,6 +98,17 @@
             <p class="two-as-one-item-name">Пломбир с помадкой и клубничный щербет</p>
           </li>
         </ul>
+        <div class="slider slider-wrapper">
+          <button type="button" class="slider slider-slide" name="slide1" id="slide1" value="Первый слайд" checked>
+          <button type="button" class="slider slider-slide" name="slide2" id="slide2" value="Второй слайд">
+          <button type="button" class="slider slider-slide" name="slide3" id="slide3" value="Третий слайд">          
+          <div class="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>            
+          </div>
+        </div>
+
         <input type="button" class="buttons-big" value="Давайте оба!">
       </section>
 
@@ -251,12 +263,16 @@
           </div>
     </footer>
     <section class="modal modal-feedback-form">
-      <h2>Мы обязательно вам ответим!</h2>          
-      <input type="text" name="user-name" value="Как вас зовут?">
-      <input type="email" name="user-e-mail" value="Ваша почта для ответа">
-      <textarea>Напишите что-нибудь...</textarea>
-      <button type="submit" value="Отправить">Отправить</button>        
-      <button class="modal-close" type="button"><img src="img/cross-big.svg" alt="Закрыть"></button>
+      <h2>Мы обязательно вам ответим!</h2>
+      <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset>
+          <input type="text" name="user-name" placeholder="Как вас зовут?">
+          <input type="email" name="user-e-mail" placeholder="Ваша почта для ответа">
+          <textarea placeholder="Напишите что-нибудь..."></textarea>
+          <button type="submit" value="Отправить">Отправить</button>        
+          <button class="modal-close" type="button" name="modal-close"><img src="img/cross-big.svg" alt="Закрыть"></button>
+        </fieldset>        
+      </form>
     </section>
   </body>
 </html>
